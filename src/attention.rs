@@ -30,6 +30,8 @@ impl SingleHeadAttention {
         let scale_factor = 1.0 / (self.d_k as f32).sqrt();
         scores.scale(scale_factor);
 
+        scores.apply_causal_mask();
+
         let weights = scores.softmax_rows();
 
         let context = weights.matmul(&v);

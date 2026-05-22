@@ -90,4 +90,12 @@ impl Matrix {
             self.data[i] *= scalar;
         }
     }
+
+    pub fn apply_causal_mask(&mut self) {
+        for row in 0..self.rows {
+            for col in (row + 1)..self.cols {
+                self.modify(row, col, -1e9);
+            }
+        }
+    }
 }
