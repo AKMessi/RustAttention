@@ -84,4 +84,10 @@ impl Matrix {
         }
         result
     }
+
+    pub fn scale(&mut self, scalar: f32) {
+        for i in 0..self.data.len() {
+            self.data[i] *= scalar;
+        }
+    }
 }
