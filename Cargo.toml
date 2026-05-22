@@ -1,0 +1,12 @@
+[package]
+name = "attention_rs"
+version = "0.1.0"
+edition = "2021"
+
+# Zero external dependencies — pure first principles.
+# Uncomment below when you're ready to go beyond learning:
+# [dependencies]
+# rand = "0.8"
+# rayon = "1.10"       # parallel heads
+# ndarray = "0.15"     # proper n-d arrays
+# cblas-sys = "0.1"    # BLAS matmul (requires system BLAS)
